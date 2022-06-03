@@ -74,3 +74,12 @@ function somaDefault(n, m) {
 }
 console.log(somaDefault(10));
 console.log(somaDefault(10, 30));
+// 61 - Tipo Unknown
+function doSomething(x) {
+    console.log(x); // assim funciona, mas se por exemplo quero retornar x[0], ele nao aceita temos q fazer if
+    if (Array.isArray(x)) { // verificando se o x é um array
+        console.log(x[0]);
+    }
+}
+doSomething("1");
+doSomething([1, 2, 3]);
