@@ -78,4 +78,11 @@ console.log(
 console.log(
   modernGreeting("Natalia", "Sra")); 
 
-// 61 - Parametros opcionais
+// 61 - Parametros default
+function somaDefault(n: number, m = 10) { // m tem o valor default 10
+  return n + m
+}
+
+console.log(somaDefault(10));
+console.log(somaDefault(10, 30));
+
