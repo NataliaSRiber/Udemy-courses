@@ -8,6 +8,8 @@ import {
   Post,
 } from '@nestjs/common';
 import { CoursesService } from './courses.service';
+import { CreateCourseDto } from './dto/create-course.dto';
+import { UpdateCourseDto } from './dto/update-course.dto';
 
 @Controller('courses') // mostra a rota a ser utilizada
 export class CoursesController {
@@ -25,14 +27,13 @@ export class CoursesController {
 
   @Post()
   // @HttpCode(HttpStatus.NO_CONTENT) // força o metodo a retornar o 204 nao o 201. Para resposta utilizamos outro
-  create(@Body() body) {
-    // para uma info especifica no @Body(name), so retornara o name
-    return this.coursesServices.create(body);
+  create(@Body() createCourseDto: CreateCourseDto) {
+    return this.coursesServices.create(createCourseDto);
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() body: object) {
-    return this.coursesServices.update(id, body);
+  update(@Param('id') id: string, @Body() updateCouserDto: UpdateCourseDto) {
+    return this.coursesServices.update(id, updateCouserDto);
   }
 
   @Delete(':id')
