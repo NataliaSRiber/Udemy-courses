@@ -10,9 +10,12 @@ import {
   Post,
   Res,
 } from '@nestjs/common';
+import { CoursesService } from './courses.service';
 
 @Controller('courses') // mostra a rota a ser utilizada
 export class CoursesController {
+  constructor(private readonly coursesServices: CoursesService) {}
+
   @Get() // podemos colocar a rota aqui tbm ou inserir rota aninhada
   findAll(@Res() response) {
     return response.status(200).send;
