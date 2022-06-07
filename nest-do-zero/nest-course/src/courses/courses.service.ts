@@ -30,6 +30,7 @@ export class CoursesService {
   create(createCourseDto: any) {
     // dto usado para criação ou update
     this.courses.push(createCourseDto);
+    return createCourseDto;
   }
 
   update(id: string, updateCourseDto: any) {
