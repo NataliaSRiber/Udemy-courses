@@ -125,4 +125,3 @@ const shirt = { name: "white shirt", price: 40 };
 
 console.log(showProductDetails(skirt));
 console.log(showProductDetails(shirt));
-
