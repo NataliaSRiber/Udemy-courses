@@ -11,6 +11,6 @@ async function bootstrap() {
       transform: true,
     }),
   ); // validação
-  await app.listen(3000);
+  await app.listen(3354);
 }
 bootstrap();
