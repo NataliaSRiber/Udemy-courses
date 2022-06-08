@@ -98,3 +98,12 @@ function sumAll() {
 }
 console.log((sumAll(1, 2, 3, 4, 5)));
 console.log((sumAll(1, 2, 3, 14, 599)));
+// 65 destructuring
+function showProductDetails(_a) {
+    var name = _a.name, price = _a.price;
+    return "O nome do produto \u00E9 ".concat(name, " e ele custa R$ ").concat(price);
+}
+var skirt = { name: "pink skirt", price: 70 };
+var shirt = { name: "white shirt", price: 40 };
+console.log(showProductDetails(skirt));
+console.log(showProductDetails(shirt));
