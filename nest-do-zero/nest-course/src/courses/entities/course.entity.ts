@@ -23,5 +23,5 @@ export class Course {
   @ManyToMany(() => Tag, (tag: Tag) => tag.courses, {
     cascade: true,
   }) // quem vai receber o relacionamento a entidade Tag
-  tags: string[];
+  tags: Tag[];
 }

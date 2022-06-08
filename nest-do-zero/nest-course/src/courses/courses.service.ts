@@ -20,12 +20,15 @@ export class CoursesService {
   ) {}
 
   findAll() {
-    return this.courseRepository.find();
+    return this.courseRepository.find({
+      relations: ['tags'],
+    });
   }
 
   findOne(id: string) {
     const course = this.courseRepository.findOne({
       where: { id: parseInt(id) },
+      relations: ['tags'],
     });
     if (!course) {
       // throw new HttpException(
