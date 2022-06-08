@@ -20,6 +20,8 @@ export class Course {
   description: string;
 
   @JoinTable() // lado principal da relação
-  @ManyToMany(() => Tag, (tag: Tag) => tag.courses) // quem vai receber o relacionamento a entidade Tag
+  @ManyToMany(() => Tag, (tag: Tag) => tag.courses, {
+    cascade: true,
+  }) // quem vai receber o relacionamento a entidade Tag
   tags: string[];
 }
