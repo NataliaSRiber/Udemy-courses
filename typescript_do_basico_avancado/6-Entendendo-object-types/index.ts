@@ -29,12 +29,14 @@ interface User {
 }
 
 function showUserDetails(user: User) {
-  console.log(`O usuário tem o email ${user.email} e sua função é ${user.role}`);
-  
+  if(user.role) {
+    console.log(`O usuário tem o email ${user.email} e sua função é ${user.role}`);
+  }
+  console.log(`A função do usuário é ${user.email}`);
 }
 
 const u1:User = { email: "icequeen@gmail.com", role: "admin"}
-const u2:User = { email: "syndra@gmail.com", role: "user"}
+const u2:User = { email: "syndra@gmail.com"}
 
 showUserDetails(u1);
 showUserDetails(u2);
