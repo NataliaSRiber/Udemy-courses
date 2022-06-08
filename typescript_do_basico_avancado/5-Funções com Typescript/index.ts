@@ -106,3 +106,12 @@ function showErrorMessage(msg: string): never { // poderiamos usar void no lugar
 // showErrorMessage("Deu ruim")
 
 // 64 - Rest Parameters
+
+function sumAll(...n: number[]) {
+  return n.reduce((number, sum) => sum + number)
+}
+
+console.log((sumAll(1,2,3,4,5)));
+console.log((sumAll(1,2,3,14,599)));
+
+
