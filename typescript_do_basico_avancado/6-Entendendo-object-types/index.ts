@@ -96,3 +96,22 @@ const wonderWoman: SuperHuman = {
 console.log(wonderWoman);
 console.log(suzi);
 
+// 74 - intersection types
+interface Gun {
+  name: string,
+}
+
+interface Character {
+  type: string,
+  caliber: number,
+}
+
+type HumanWithGun = Character & Gun;
+
+const arnold: HumanWithGun = {
+  name: "arnold",
+  type: "shotgun",
+  caliber: 12,
+}
+
+console.log(arnold);

@@ -31,7 +31,7 @@ var coords = {
 };
 coords.y = 15;
 console.log(coords);
-var susi = {
+var suzi = {
     name: "Suzana",
     age: 25
 };
@@ -41,4 +41,10 @@ var wonderWoman = {
     superpowers: ["strength", "durability", "flight"]
 };
 console.log(wonderWoman);
-console.log(susi);
+console.log(suzi);
+var arnold = {
+    name: "arnold",
+    type: "shotgun",
+    caliber: 12
+};
+console.log(arnold);
