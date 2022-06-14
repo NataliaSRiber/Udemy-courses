@@ -70,3 +70,29 @@ let coords: CoorObject = {
 coords.y = 15
 
 console.log(coords);
+
+// 73 - extend interfaces
+
+interface Human {
+  name: string,
+  age: number,
+}
+
+interface SuperHuman extends Human { // ele ja pega as propriedades definidas em Human
+  superpowers: string[],
+}
+
+const suzi: Human = {
+  name: "Suzana",
+  age: 25,
+}
+
+const wonderWoman: SuperHuman = {
+  name: "Diana",
+  age: 800,
+  superpowers: ["strength", "durability", "flight"],
+}
+
+console.log(wonderWoman);
+console.log(suzi);
+

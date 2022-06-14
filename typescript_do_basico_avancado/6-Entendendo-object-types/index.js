@@ -31,3 +31,14 @@ var coords = {
 };
 coords.y = 15;
 console.log(coords);
+var susi = {
+    name: "Suzana",
+    age: 25
+};
+var wonderWoman = {
+    name: "Diana",
+    age: 800,
+    superpowers: ["strength", "durability", "flight"]
+};
+console.log(wonderWoman);
+console.log(susi);
