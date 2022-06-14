@@ -57,3 +57,16 @@ const fusca: Car = {
 console.log(fusca);
 
 //fusca.wheels = 5; não aceita que o valor muude
+
+// 72 - index signature
+interface CoorObject {
+  [index: string]: number
+}
+
+let coords: CoorObject = {
+  x: 10
+}
+
+coords.y = 15
+
+console.log(coords);

@@ -26,4 +26,8 @@ var fusca = {
     wheels: 4
 };
 console.log(fusca);
-//fusca.wheels = 5; não aceita que o valor muude
+var coords = {
+    x: 10
+};
+coords.y = 15;
+console.log(coords);
