@@ -121,5 +121,28 @@ let myArray: ReadonlyArray<string> = ["maça", "banana", "uva"]; // so leitura e
 
 // myArray[3] = "blueberry"; ele nao aceita a adição devido ao readonly
 myArray.forEach((item) => {
-  console.log(`Fruta: ${item}`); // so altera com metodos: map, foreach
+  console.log(`Fruta: ${item}`); // so altera com metodos: map, foreach,
 })
+
+// 76 - Tuplas
+
+type fiveNumbers = [number, number, number, number, number]; // tupla de number
+
+// const myNumberArray1: fiveNumbers = [1, 2, 3, 4, 5, 5] não aceita mais que cinco
+// const mixedArray: fiveNumbers = [1, 2, 3, true, "oi"]; não aceita diferente de number
+const myNumberArray: fiveNumbers = [1, 2, 3, 4, 5];
+
+console.log(myNumberArray);
+
+// para colocar diferentes tipos
+type nameAndAge = [string, number];
+const anotherUser: nameAndAge = ["Johann", 30];
+
+console.log(anotherUser);
+
+// 77 - Tuplas com readonly
+
+function showNumbers(numbers: readonly [number, number]) {
+  console.log(numbers[0]);
+  console.log(numbers[1]);
+}

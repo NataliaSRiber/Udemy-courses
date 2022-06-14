@@ -52,5 +52,16 @@ console.log(arnold);
 var myArray = ["maça", "banana", "uva"]; // so leitura e nao modifica
 // myArray[3] = "blueberry"; ele nao aceita a adição devido ao readonly
 myArray.forEach(function (item) {
-    console.log("Fruta: ".concat(item));
+    console.log("Fruta: ".concat(item)); // so altera com metodos: map, foreach,
 });
+// const myNumberArray1: fiveNumbers = [1, 2, 3, 4, 5, 5] não aceita mais que cinco
+// const mixedArray: fiveNumbers = [1, 2, 3, true, "oi"]; não aceita diferente de number
+var myNumberArray = [1, 2, 3, 4, 5];
+console.log(myNumberArray);
+var anotherUser = ["Johann", 30];
+console.log(anotherUser);
+// 77 - Tuplas com readonly
+function showNumbers(numbers) {
+    console.log(numbers[0]);
+    console.log(numbers[1]);
+}
