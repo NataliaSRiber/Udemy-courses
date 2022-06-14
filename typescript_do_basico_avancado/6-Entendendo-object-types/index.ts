@@ -29,10 +29,11 @@ interface User {
 }
 
 function showUserDetails(user: User) {
+  console.log(`O usuário tem o email ${user.email}`);
+
   if(user.role) {
-    console.log(`O usuário tem o email ${user.email} e sua função é ${user.role}`);
+    console.log(` A sua função é ${user.role}`);
   }
-  console.log(`A função do usuário é ${user.email}`);
 }
 
 const u1:User = { email: "icequeen@gmail.com", role: "admin"}
@@ -40,3 +41,19 @@ const u2:User = { email: "syndra@gmail.com"}
 
 showUserDetails(u1);
 showUserDetails(u2);
+
+// 71 - propriedades readonly
+
+interface Car {
+  brand: string
+  readonly wheels: number // propriedade de leitura.
+}
+
+const fusca: Car = {
+  brand: "VW",
+  wheels: 4
+}
+
+console.log(fusca);
+
+//fusca.wheels = 5; não aceita que o valor muude
