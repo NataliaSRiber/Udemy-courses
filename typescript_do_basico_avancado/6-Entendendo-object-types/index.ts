@@ -115,3 +115,11 @@ const arnold: HumanWithGun = {
 }
 
 console.log(arnold);
+
+// 75 - Readonly array
+let myArray: ReadonlyArray<string> = ["maça", "banana", "uva"]; // so leitura e nao modifica
+
+// myArray[3] = "blueberry"; ele nao aceita a adição devido ao readonly
+myArray.forEach((item) => {
+  console.log(`Fruta: ${item}`); // so altera com metodos: map, foreach
+})

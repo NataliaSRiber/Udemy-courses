@@ -48,3 +48,9 @@ var arnold = {
     caliber: 12
 };
 console.log(arnold);
+// 75 - Readonly array
+var myArray = ["maça", "banana", "uva"]; // so leitura e nao modifica
+// myArray[3] = "blueberry"; ele nao aceita a adição devido ao readonly
+myArray.forEach(function (item) {
+    console.log("Fruta: ".concat(item));
+});
