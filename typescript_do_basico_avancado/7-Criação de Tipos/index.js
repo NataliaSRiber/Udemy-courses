@@ -10,3 +10,7 @@ function showProductName(obj) {
 }
 var obj1 = { name: "porta", cor: "branca" };
 console.log(showProductName(obj1));
+var myCar = { name: "Ferrari", wheels: 4, engine: 7.0, color: "Branco" };
+var myPen = { name: "Bic", wheels: false, engine: false, color: "azul" };
+console.log(myCar);
+console.log(myPen);
