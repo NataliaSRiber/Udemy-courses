@@ -64,4 +64,13 @@ const char: Character = {
   hasDriveLicence: false,
 }
 
-console.log(showCharName(char, 'name'));
+console.log(showCharName(char, 'name')); // espera a chave name
+
+// typeof type operator
+
+const userName: string = "Matheus";
+const userName2: typeof userName = "Jade"
+// const userName3: typeof userName = 2;
+
+type x = typeof userName
+const userName4: x = "Murilo";
