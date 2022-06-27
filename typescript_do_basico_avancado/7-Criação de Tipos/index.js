@@ -14,3 +14,12 @@ var myCar = { name: "Ferrari", wheels: 4, engine: 7.0, color: "Branco" };
 var myPen = { name: "Bic", wheels: false, engine: false, color: "azul" };
 console.log(myCar);
 console.log(myPen);
+// 84 type parameters
+function getSomeKey(obj, key) {
+    return "A chave ".concat(key, " est\u00E1 presente no objeto e tmem o valor de ").concat(obj[key]);
+}
+var server = {
+    hd: '2TB',
+    ram: '32GB'
+};
+console.log(getSomeKey(server, 'ram'));
