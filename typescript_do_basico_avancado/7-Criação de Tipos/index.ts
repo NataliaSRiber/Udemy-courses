@@ -66,7 +66,7 @@ const char: Character = {
 
 console.log(showCharName(char, 'name')); // espera a chave name
 
-// typeof type operator
+// 86 typeof type operator
 
 const userName: string = "Matheus";
 const userName2: typeof userName = "Jade"
@@ -74,3 +74,21 @@ const userName2: typeof userName = "Jade"
 
 type x = typeof userName
 const userName4: x = "Murilo";
+
+// 87 indexed acces type
+
+type Truck = { km:number, kg: number, description: string }
+
+type km = Truck['km']; // tipo baseado nesta chave
+
+const newtruck: Truck = {
+  km: 10000,
+  kg: 5000,
+  description: "Caminhão para cargas pequenas"
+}
+
+function showKm(km: km) {
+  console.log(`Ò veículo tem a km de: ${km}`);
+}
+
+showKm(newtruck.km);

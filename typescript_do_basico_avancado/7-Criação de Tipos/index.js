@@ -31,4 +31,17 @@ var char = {
     age: 1,
     hasDriveLicence: false
 };
-console.log(showCharName(char, 'name'));
+console.log(showCharName(char, 'name')); // espera a chave name
+// 86 typeof type operator
+var userName = "Matheus";
+var userName2 = "Jade";
+var userName4 = "Murilo";
+var newtruck = {
+    km: 10000,
+    kg: 5000,
+    description: "Caminhão para cargas pequenas"
+};
+function showKm(km) {
+    console.log("\u00D2 ve\u00EDculo tem a km de: ".concat(km));
+}
+showKm(newtruck.km);
