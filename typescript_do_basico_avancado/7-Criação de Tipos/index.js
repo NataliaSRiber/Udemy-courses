@@ -23,3 +23,12 @@ var server = {
     ram: '32GB'
 };
 console.log(getSomeKey(server, 'ram'));
+function showCharName(obj, name) {
+    return "".concat(obj[name]);
+}
+var char = {
+    name: "Maggie Simpson",
+    age: 1,
+    hasDriveLicence: false
+};
+console.log(showCharName(char, 'name'));

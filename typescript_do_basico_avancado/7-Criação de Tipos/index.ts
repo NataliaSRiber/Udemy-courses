@@ -47,3 +47,21 @@ const server = {
 }
 
 console.log(getSomeKey(server, 'ram'));
+
+// 85 keyof type operator
+
+type Character = { name: string, age: number, hasDriveLicence: boolean }
+
+type C = keyof Character
+
+function showCharName(obj: Character, name: C):string { // relaciona 
+  return `${obj[name]}`
+}
+
+const char: Character = {
+  name: "Maggie Simpson",
+  age: 1,
+  hasDriveLicence: false,
+}
+
+console.log(showCharName(char, 'name'));
