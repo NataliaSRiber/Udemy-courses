@@ -63,3 +63,21 @@ const destroyer = new KillerMachine("Destroyer", 4);
 console.log(destroyer);
 console.log(trator);
 
+// 96 - métodos
+
+class Dwarf {
+  name
+
+  constructor(name: string) {
+    this.name = name;
+  }
+
+  greeting() {
+    console.log(("Hey Stranger!"));
+  }
+}
+
+const jimmy = new Dwarf("Jimmy");
+console.log(jimmy.name);
+
+jimmy.greeting();
