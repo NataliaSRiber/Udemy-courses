@@ -87,3 +87,20 @@ var Truck = /** @class */ (function () {
 }());
 var volvo = new Truck("Volvo", 400);
 volvo.showDetails();
+// 98 - Getters
+var Person = /** @class */ (function () {
+    function Person(name, lastName) {
+        this.name = name;
+        this.lastName = lastName;
+    }
+    Object.defineProperty(Person.prototype, "fullName", {
+        get: function () {
+            return this.name + " " + this.lastName;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return Person;
+}());
+var natalia = new Person("Natalia", "Souza");
+console.log(natalia.fullName);
