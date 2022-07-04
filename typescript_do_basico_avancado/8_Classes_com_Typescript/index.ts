@@ -26,3 +26,15 @@ class NewUser {
 const kalifa = new NewUser("Kalifa", 11);
 console.log(kalifa);
 
+// 94 propriedade readonly
+
+class Car {
+  name
+  readonly wheels = 4 // campo inicia com um valor e nao pode ser alterado
+
+  constructor(name: string) {
+    this.name = name
+  }
+}
+
+// 95 herança e super
