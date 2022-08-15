@@ -3,7 +3,10 @@ import React from 'react';
 import FirstComponent from './components/FirstComponent';
 // 5 - Desestruturando props
 import SecondComponent from './components/SecondComponent';
+// 6 - Desestructuring
 import Destructuring from './components/Destructuring';
+// 7 - Hook useState
+import State from './components/State';
 
 // 1 - variáveis
 const name: string = "Natalia";
@@ -34,6 +37,7 @@ function App() {
         commentsQty={5}
         tags={['Xitara','Belinha', 'Kalifa', 'Tufão', 'Mel']} 
       />
+      <State />
     </div>
   );
 }
