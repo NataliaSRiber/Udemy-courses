@@ -1,6 +1,9 @@
 import React from 'react';
 // 4 - importação de componentes
 import FirstComponent from './components/FirstComponent';
+// 5 - Desestruturando props
+import SecondComponent from './components/SecondComponent';
+import Destructuring from './components/Destructuring';
 
 // 1 - variáveis
 const name: string = "Natalia";
@@ -24,6 +27,13 @@ function App() {
         </div><h3>{userGreeting(name)}</h3></>
       )}
       <FirstComponent />
+      <SecondComponent name="Belinha"/>
+      <Destructuring 
+        title='Dogs fofos'
+        content='Nossos dogs'
+        commentsQty={5}
+        tags={['Xitara','Belinha', 'Kalifa', 'Tufão', 'Mel']} 
+      />
     </div>
   );
 }
