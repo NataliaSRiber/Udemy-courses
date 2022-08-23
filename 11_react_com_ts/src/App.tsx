@@ -7,6 +7,9 @@ import SecondComponent from './components/SecondComponent';
 import Destructuring, { Category } from './components/Destructuring';
 // 7 - Hook useState
 import State from './components/State';
+// 11 - utilizando context
+import Context from './components/Context';
+
 
 // 1 - variáveis
 const name: string = "Natalia";
@@ -75,6 +78,7 @@ const contextValue: IAppContext = { // onde tera a interface
           mySecondText &&
           <p>Há texto</p>
         }
+        <Context />
       </div>
     </AppContext.Provider>
   );
