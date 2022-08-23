@@ -5,9 +5,20 @@ interface Props {
   content: string;
   commentsQty: number;
   tags: string[];
+  // 8 - enum
+  category: Category;
 }
 
-export default function Destructuring ({title, content, commentsQty, tags}: Props) {
+
+export enum Category {
+  Be = "Belinha",
+  Ka = "Kalifa",
+  Tu = "Tufão",
+  Xi = "Xitara",
+  TS = "TS"
+}
+
+export default function Destructuring ({title, content, commentsQty, tags, category}: Props) {
   return (
     <div>
       <h2>{title}</h2>
@@ -18,6 +29,7 @@ export default function Destructuring ({title, content, commentsQty, tags}: Prop
           <span>#{tag}</span>
         ))}
       </div>
+      <h4>Categoria: {category}</h4>
     </div>
   );
 }
