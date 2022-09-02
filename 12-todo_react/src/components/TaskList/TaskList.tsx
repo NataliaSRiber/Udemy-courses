@@ -1,14 +1,23 @@
 import * as React from 'react';
+import { ITask } from '../../interfaces/Task';
 
 export interface IAppProps {
+  taskList: ITask[];
 }
 
-function TaskList (props: IAppProps) {
+function TaskList ({taskList}: IAppProps) {
   return (
-    <div>
-      <h2>Suas Tarefas:</h2>
-      <p>Lista</p>
-    </div>
+    <>
+      {taskList.length > 0 ? (
+        taskList.map((task)=> (
+          <div key={task.id}>
+            <p>{task.title}</p>
+          </div>
+        ))
+      ) : (
+        <p>Não há tarefas adicionadas</p>
+      )}
+    </>
   );
 }
 

@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import styles from './App.module.css'
 import TaskForm from './components/TaskForm/TaskForm';
 import { ITask } from './interfaces/Task';
+import TaskList from './components/TaskList/TaskList';
 
 
 
@@ -25,6 +26,7 @@ function App() {
         </div>
         <div>
           <h2>Suas Tarefas:</h2>
+          <TaskList taskList={taskList}/>
           <p>Lista</p>
         </div>
       </main>
