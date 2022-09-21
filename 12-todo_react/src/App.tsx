@@ -12,6 +12,8 @@ import Modal from './components/Modal/Modal';
 function App() {
 
   const [taskList, setTaskList] = useState<ITask[]>([]); // lista de tarefas
+  const [taskToUpdate, setTaskToUpdate] = useState<ITask | null>(null); // estado para salvar a task e aparecer no modal
+  
   const deleteTask = (id: number) => {
     setTaskList(taskList.filter((task) => {
       return task.id !== id;
@@ -27,8 +29,9 @@ function App() {
     }
   };
 
-  const editTask = (): void => {
+  const editTask = (task: ITask): void => {
     hideOrShowModal(true);
+    setTaskToUpdate(task);
   }
 
   return (
