@@ -1,0 +1,26 @@
+import * as React from 'react';
+import styles from './Modal.module.css';
+
+export interface IAppProps {
+  children: React.ReactNode; // significa que vai utilizar tsx no children
+}
+
+function Modal ({ children }: IAppProps) {
+
+  const closeModal = (e: React.MouseEvent): void => {
+    const modal = document.querySelector('#modal')
+    modal!.classList.add('hide'); // ! este elemento exstirá
+  };
+
+  return (
+    <div id='modal' className='hide'>
+      <div className={styles.fade} onClick={closeModal}></div>
+      <div className={styles.modal}>
+        <h2>Texto modal</h2>
+        {children}
+      </div>
+    </div>
+  );
+}
+
+export default Modal;

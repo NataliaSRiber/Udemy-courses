@@ -1,0 +1,12 @@
+/* estilo que só funciona no header */
+
+.header {
+  background-color: #A0E7E5;
+  color: #FFAEBC;
+  padding: 1em;
+  text-align: center;
+}
+
+.header h1 {
+  background-color: #A0E7E5;
+}
