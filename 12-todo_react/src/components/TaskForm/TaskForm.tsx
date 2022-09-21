@@ -9,12 +9,20 @@ export interface IAppProps {
   task?: ITask | null;
 }
 
-function TaskForm ({btnText, taskList, setTaskList}: IAppProps) {
+function TaskForm ({btnText, taskList, setTaskList, task}: IAppProps) {
 
   const [id, setId] = React.useState<number>(0);
   const [title, setTitle] = React.useState<string>('');
   const [difficulty, setDifficult] = React.useState<number>(0);
  
+  React.useEffect(() => {
+    if(task) {
+      setId(task.id);
+      setTitle(task.title);
+      setDifficult(task.difficulty);
+    }
+  }, [task]);
+
   const addTaskHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
