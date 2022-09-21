@@ -5,7 +5,8 @@ import styles from './TaskForm.module.css';
 export interface IAppProps {
   btnText: string;
   taskList: ITask[];
-  setTaskList?: React.Dispatch<React.SetStateAction<ITask[]>>; //é opcional mas pode vir fomulario de edição
+  setTaskList?: React.Dispatch<React.SetStateAction<ITask[]>>; // é opcional mas pode vir fomulario de edição
+  task?: ITask | null;
 }
 
 function TaskForm ({btnText, taskList, setTaskList}: IAppProps) {

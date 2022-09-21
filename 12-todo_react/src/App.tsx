@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className="App">
-      <Modal children={<TaskForm btnText='Editar Tarefa' taskList={taskList}/>} />
+      <Modal children={<TaskForm btnText='Editar Tarefa' taskList={taskList} task={taskToUpdate}/>}/>
       <Header />
       <main className={styles.main}>
         <div>
@@ -49,7 +49,10 @@ function App() {
         </div>
         <div>
           <h2>Suas Tarefas:</h2>
-          <TaskList taskList={taskList} handleDelete={deleteTask} handleEdit={editTask}/>
+          <TaskList 
+            taskList={taskList} 
+            handleDelete={deleteTask} 
+            handleEdit={editTask}/>
           <p>Lista</p>
         </div>
       </main>
