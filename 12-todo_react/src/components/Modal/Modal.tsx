@@ -9,7 +9,7 @@ function Modal ({ children }: IAppProps) {
 
   const closeModal = (e: React.MouseEvent): void => {
     const modal = document.querySelector('#modal')
-    modal!.classList.add('hide');
+    modal!.classList.add('hide'); // ! este elemento exstirá
   };
 
   return (
