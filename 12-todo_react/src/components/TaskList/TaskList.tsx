@@ -20,7 +20,7 @@ function TaskList ({ taskList, handleDelete, handleEdit }: IAppProps) {
             </div>
             <div className={styles.actions}>
               <i className='bi bi-pencil' onClick={() => handleEdit()}></i>
-              <i className='bi bi-trash' onClick={() => {handleDelete(task.id)}}></i>
+              <i className='bi bi-trash' onClick={() => handleDelete(task.id)}></i>
             </div>
           </div>
         ))
