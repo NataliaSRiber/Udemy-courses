@@ -7,8 +7,6 @@ import { ITask } from './interfaces/Task';
 import TaskList from './components/TaskList/TaskList';
 import Modal from './components/Modal/Modal';
 
-
-
 function App() {
 
   const [taskList, setTaskList] = useState<ITask[]>([]); // lista de tarefas
@@ -34,9 +32,30 @@ function App() {
     setTaskToUpdate(task);
   }
 
+  const updateTask = (id: number, title: string, difficulty: number) => {
+
+    const updatedTask: ITask = { id, title, difficulty };
+    const updatedItems = taskList.map((task) => {
+      return task.id === updatedTask.id ? updatedTask : task
+    });
+
+    setTaskList(updatedItems);
+
+    hideOrShowModal(false);
+  };
+
+
   return (
     <div className="App">
-      <Modal children={<TaskForm btnText='Editar Tarefa' taskList={taskList} task={taskToUpdate}/>}/>
+      <Modal children={
+        <TaskForm 
+        btnText='Editar Tarefa' 
+        taskList={taskList}
+        task={taskToUpdate}
+        handleUpdate={updateTask}
+        />
+      }
+      />
       <Header />
       <main className={styles.main}>
         <div>
@@ -52,7 +71,8 @@ function App() {
           <TaskList 
             taskList={taskList} 
             handleDelete={deleteTask} 
-            handleEdit={editTask}/>
+            handleEdit={editTask}
+          />
           <p>Lista</p>
         </div>
       </main>

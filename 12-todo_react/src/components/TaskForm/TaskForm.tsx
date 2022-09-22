@@ -7,9 +7,10 @@ export interface IAppProps {
   taskList: ITask[];
   setTaskList?: React.Dispatch<React.SetStateAction<ITask[]>>; // é opcional mas pode vir fomulario de edição
   task?: ITask | null;
+  handleUpdate?(id: number, title: string, difficulty: number): void;
 }
 
-function TaskForm ({btnText, taskList, setTaskList, task}: IAppProps) {
+function TaskForm ({ btnText, taskList, setTaskList, task, handleUpdate }: IAppProps) {
 
   const [id, setId] = React.useState<number>(0);
   const [title, setTitle] = React.useState<string>('');
@@ -26,14 +27,17 @@ function TaskForm ({btnText, taskList, setTaskList, task}: IAppProps) {
   const addTaskHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const id = Math.floor(Math.random() * 1000);
-    const newTask: ITask = { id, title, difficulty };
-    setTaskList!([...taskList, newTask]); // ! o argumento virá
-    setTitle('');
-    setDifficult(0);
-    console.log(taskList);
-    
-  }
+    if(handleUpdate) {
+      handleUpdate(id, title, difficulty);
+
+    } else {
+        const id = Math.floor(Math.random() * 1000);
+        const newTask: ITask = { id, title, difficulty };
+        setTaskList!([...taskList, newTask]); // ! o argumento virá
+        setTitle('');
+        setDifficult(0);
+    } 
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if(e.target.name === "title") {
@@ -41,7 +45,7 @@ function TaskForm ({btnText, taskList, setTaskList, task}: IAppProps) {
      } else {
       setDifficult(parseInt(e.target.value)) // dado do input é uma string e queremos um numero
     }
-  }
+  };
 
   return (
     <form onSubmit={addTaskHandler} className={styles.form}>
