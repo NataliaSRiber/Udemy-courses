@@ -22,8 +22,10 @@
 }
 
 .form input[type='submit']:hover {
-  background-color: white;
   border-color: gray;
+  color: white;
+  font-weight: bolder;
+  opacity: 0.8;
 }
 
 .input_container {
